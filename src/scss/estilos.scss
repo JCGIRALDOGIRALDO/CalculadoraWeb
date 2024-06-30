@@ -1,50 +1,7 @@
 @use "./styles/fuentes.scss";
 @use "./styles/variables.scss";
 @use "./styles/mixins.scss";
-@use "./styles/clases.scss";
+@use "./styles/general.scss";
 @use "./styles/header.scss";
 @use "./styles/main.scss";
 @use "./styles/footer.scss";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100vh;
-}
-.container {
-  background-color: #2c3e50;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-gap: 10px; /* Espacio entre las celdas */
-  grid-template-rows: auto 1fr auto; /* Alturas de las filas */
-}
-
-.header {
-  grid-area: header; /* Asigna el área 'header' */
-  background-color: #3498db;
-  color: white;
-  padding: 10px;
-}
-
-.main {
-  width: 80%;
-  margin: 1rem auto;
-  grid-area: main; /* Asigna el área 'main' */
-  background-color: #ecf0f1;
-  padding: 10px;
-}
-
-.footer {
-  grid-area: footer; /* Asigna el área 'footer' */
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px;
-}
