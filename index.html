@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora web</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input type="text" />
+        <div><h1 id="numeroACalcular"></h1></div>
+        <div>
+          <div>
+            <button>%</button>
+            <button>CE</button>
+            <button>C</button>
+            <button>-</button>
+          </div>
+
+          <div>
+            <button onclick="buttonNumero_a()">?</button>
+            <button onclick="buttonNumero_b()">?</button>
+            <button onclick="buttonNumero_c()">?</button>
+            <button onclick="buttonNumero_d()">/</button>
+          </div>
+
+          <div>
+            <button onclick="buttonNumero_7()">7</button>
+            <button onclick="buttonNumero_8()">8</button>
+            <button onclick="buttonNumero_9()">9</button>
+            <button onclick="btnOperadorDivision(division)">X</button>
+          </div>
+
+          <div>
+            <button onclick="buttonNumero_4()">4</button>
+            <button onclick="buttonNumero_5()">5</button>
+            <button onclick="buttonNumero_6()">6</button>
+            <button onclick="btnOperadorResta(resta)">-</button>
+          </div>
+
+          <div>
+            <button onclick="buttonNumero_1()">1</button>
+            <button onclick="buttonNumero_2()">2</button>
+            <button onclick="buttonNumero_3()">3</button>
+            <button onclick="btnOperadorSuma()">+</button>
+          </div>
+
+          <div>
+            <button onclick="buttonNumero_a()">?</button>
+            <button onclick="buttonNumero_0()">0</button>
+            <button onclick="buttonNumero_d()">.</button>
+            <button onclick="resultado()">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="App.js"></script>
+  </body>
+</html>
