@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora web</title>
+    <link rel="stylesheet" href="/src/css/estilos.css" />
   </head>
   <body>
     <div>
@@ -22,21 +23,21 @@
             <button onclick="buttonNumero_a()">?</button>
             <button onclick="buttonNumero_b()">?</button>
             <button onclick="buttonNumero_c()">?</button>
-            <button onclick="buttonNumero_d()">/</button>
+            <button onclick="btnOperadorDivision()">/</button>
           </div>
 
           <div>
             <button onclick="buttonNumero_7()">7</button>
             <button onclick="buttonNumero_8()">8</button>
             <button onclick="buttonNumero_9()">9</button>
-            <button onclick="btnOperadorDivision(division)">X</button>
+            <button onclick="btnOperadorMultiplicacion()">X</button>
           </div>
 
           <div>
             <button onclick="buttonNumero_4()">4</button>
             <button onclick="buttonNumero_5()">5</button>
             <button onclick="buttonNumero_6()">6</button>
-            <button onclick="btnOperadorResta(resta)">-</button>
+            <button onclick="btnOperadorResta()">-</button>
           </div>
 
           <div>
@@ -50,7 +51,7 @@
             <button onclick="buttonNumero_a()">?</button>
             <button onclick="buttonNumero_0()">0</button>
             <button onclick="buttonNumero_d()">.</button>
-            <button onclick="resultado()">=</button>
+            <button onclick="btnOperadorIgual()">=</button>
           </div>
         </div>
       </div>

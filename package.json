@@ -1,0 +1,24 @@
+{
+  "name": "calculadora_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:src/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCGIRALDOGIRALDO/CalculadoraWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JCGIRALDOGIRALDO/CalculadoraWeb/issues"
+  },
+  "homepage": "https://github.com/JCGIRALDOGIRALDO/CalculadoraWeb#readme",
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
+}

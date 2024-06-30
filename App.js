@@ -1,6 +1,7 @@
 let agruparNumeros = [];
 let operadorActual = 0;
 let resultado = 0;
+let operador = null;
 
 // Recopila los números
 function numeros(numero) {
@@ -48,12 +49,32 @@ function buttonNumero_9() {
   numeros(9);
 }
 
-// Función para operador suma
-function btnOperadorSuma() {
-  resultado += operadorActual;
+// Función para manejar las operaciones
+function manejarOperacion(op) {
+  if (operador !== null) {
+    calcularResultado();
+  } else {
+    resultado = operadorActual;
+  }
+  operador = op;
   agruparNumeros = []; // Reiniciar el array para el próximo número
   operadorActual = 0;
-  actualizarResultado();
+}
+
+function btnOperadorSuma() {
+  manejarOperacion("+");
+}
+
+function btnOperadorResta() {
+  manejarOperacion("-");
+}
+
+function btnOperadorMultiplicacion() {
+  manejarOperacion("*");
+}
+
+function btnOperadorDivision() {
+  manejarOperacion("/");
 }
 
 // Actualizar y mostrar el resultado
@@ -64,7 +85,33 @@ function actualizarResultado() {
 
 // Función para calcular el resultado final
 function calcularResultado() {
+  switch (operador) {
+    case "+":
+      resultado += operadorActual;
+      break;
+    case "-":
+      resultado -= operadorActual;
+      break;
+    case "*":
+      resultado *= operadorActual;
+      break;
+    case "/":
+      if (operadorActual !== 0) {
+        resultado /= operadorActual;
+      } else {
+        alert("No se puede dividir por cero");
+        return;
+      }
+      break;
+  }
+  operador = null;
+  operadorActual = resultado;
   actualizarResultado();
+}
+
+// Función para el botón de igual
+function btnOperadorIgual() {
+  calcularResultado();
 }
 
 // Placeholder para operadores no definidos
@@ -78,11 +125,5 @@ function buttonNumero_c() {
   alert("Función no definida");
 }
 function buttonNumero_d() {
-  alert("Función no definida");
-}
-function btnOperadorResta() {
-  alert("Función no definida");
-}
-function btnOperadorDivision() {
   alert("Función no definida");
 }
