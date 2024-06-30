@@ -1,0 +1,113 @@
+//EJEMPLOS PARA INCLUIR LOS MIXIN
+// @include border-radius(10px);
+//@include box-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+//@include flexbox(row, center, center);
+//@include gradient-background(#ff7e5f, #feb47b);
+//@include border-radius(5px);
+
+//Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+//Box Shadow
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+//Text Shadow
+@mixin text-shadow($shadow...) {
+  text-shadow: $shadow;
+}
+//Gradient Background
+@mixin gradient-background($start-color, $end-color) {
+  background: $start-color;
+  background: -webkit-linear-gradient($start-color, $end-color);
+  background: -moz-linear-gradient($start-color, $end-color);
+  background: -o-linear-gradient($start-color, $end-color);
+  background: linear-gradient($start-color, $end-color);
+}
+//Transition
+@mixin transition($property, $duration, $timing-function: ease, $delay: 0s) {
+  -webkit-transition: $property $duration $timing-function $delay;
+  -moz-transition: $property $duration $timing-function $delay;
+  -ms-transition: $property $duration $timing-function $delay;
+  -o-transition: $property $duration $timing-function $delay;
+  transition: $property $duration $timing-function $delay;
+}
+//Transform
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+//Flexbox
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+//Centering Elements
+//Centering with Flexbox
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//Absolute Centering
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//Responsive Typography
+@mixin responsive-font(
+  $min-size,
+  $max-size,
+  $min-width: 320px,
+  $max-width: 1200px
+) {
+  font-size: $min-size;
+
+  @media (min-width: $min-width) {
+    font-size: calc(
+      #{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}) /
+            (#{$max-width} - #{$min-width}))
+    );
+  }
+
+  @media (min-width: $max-width) {
+    font-size: $max-size;
+  }
+}
+//Media Queries
+//Breakpoints
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 601px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 993px) {
+      @content;
+    }
+  }
+}
+//Custom Media Query
+@mixin media($query) {
+  @media #{$query} {
+    @content;
+  }
+}
