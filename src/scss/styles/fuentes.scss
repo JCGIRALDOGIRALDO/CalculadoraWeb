@@ -1,0 +1,20 @@
+// Ruta a tus archivos de fuentes
+$font-path: "../assets/fonts/";
+
+// Define la fuente regular
+@font-face {
+  font-family: "MiFuenteNormal";
+  src: url("#{$font-path}mifuente-regular.woff2") format("woff2"),
+    url("#{$font-path}mifuente-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Define la fuente negrita
+@font-face {
+  font-family: "MiFuenteNegrita";
+  src: url("#{$font-path}mifuente-bold.woff2") format("woff2"),
+    url("#{$font-path}mifuente-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}

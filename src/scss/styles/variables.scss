@@ -1,0 +1,50 @@
+// Colores
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #e74c3c;
+$text-color: #333;
+$link-color: #3498db;
+$background-color: #f2f2f2;
+$border-color: #ddd;
+
+// Tipografía
+$base-font-size: 16px;
+$heading-font: "Roboto", sans-serif;
+$body-font: "Open Sans", sans-serif;
+
+// Espaciado
+$base-spacing: 10px;
+$small-spacing: 5px;
+$large-spacing: 20px;
+
+// Tamaños de fuente
+$small-font-size: 14px;
+$medium-font-size: $base-font-size;
+$large-font-size: 18px;
+
+// Dimensiones comunes
+$content-width: 960px;
+$header-height: 80px;
+$footer-height: 60px;
+
+// Z-index
+$z-index-header: 100;
+$z-index-modal: 1000;
+$z-index-dropdown: 500;
+
+// Radios de borde
+$border-radius-small: 3px;
+$border-radius-large: 5px;
+
+// Breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+
+// Animaciones
+$animation-duration: 0.3s;
+$animation-easing: ease-out;
+
+// Otros
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$transition-duration: 0.3s;

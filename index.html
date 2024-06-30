@@ -7,55 +7,66 @@
     <link rel="stylesheet" href="/src/css/estilos.css" />
   </head>
   <body>
-    <div>
-      <div>
-        <input type="text" />
-        <div><h1 id="numeroACalcular"></h1></div>
-        <div>
-          <div>
-            <button>%</button>
-            <button>CE</button>
-            <button>C</button>
-            <button>-</button>
+    <div class="container">
+    <header class="header">
+      <h1 class="header__title">Calculadora WEB</h1>
+    </header>
+
+    <main class="main">
+      <div class="calculator">
+        <div class="calculator__display">
+          <h2 id="numeroACalcular" class="calculator__display-text"></h2>
+        </div>
+        <div class="calculator__buttons">
+          <div class="calculator__row">
+            <button class="calculator__button">%</button>
+            <button class="calculator__button">CE</button>
+            <button class="calculator__button">C</button>
+            <button class="calculator__button">-</button>
           </div>
 
-          <div>
-            <button onclick="buttonNumero_a()">?</button>
-            <button onclick="buttonNumero_b()">?</button>
-            <button onclick="buttonNumero_c()">?</button>
-            <button onclick="btnOperadorDivision()">/</button>
+          <div class="calculator__row">
+            <button class="calculator__button" onclick="buttonNumero_a()">?</button>
+            <button class="calculator__button" onclick="buttonNumero_b()">?</button>
+            <button class="calculator__button" onclick="buttonNumero_c()">?</button>
+            <button class="calculator__button" onclick="btnOperadorDivision()">/</button>
           </div>
 
-          <div>
-            <button onclick="buttonNumero_7()">7</button>
-            <button onclick="buttonNumero_8()">8</button>
-            <button onclick="buttonNumero_9()">9</button>
-            <button onclick="btnOperadorMultiplicacion()">X</button>
+          <div class="calculator__row">
+            <button class="calculator__button" onclick="buttonNumero_7()">7</button>
+            <button class="calculator__button" onclick="buttonNumero_8()">8</button>
+            <button class="calculator__button" onclick="buttonNumero_9()">9</button>
+            <button class="calculator__button" onclick="btnOperadorMultiplicacion()">X</button>
           </div>
 
-          <div>
-            <button onclick="buttonNumero_4()">4</button>
-            <button onclick="buttonNumero_5()">5</button>
-            <button onclick="buttonNumero_6()">6</button>
-            <button onclick="btnOperadorResta()">-</button>
+          <div class="calculator__row">
+            <button class="calculator__button" onclick="buttonNumero_4()">4</button>
+            <button class="calculator__button" onclick="buttonNumero_5()">5</button>
+            <button class="calculator__button" onclick="buttonNumero_6()">6</button>
+            <button class="calculator__button" onclick="btnOperadorResta()">-</button>
           </div>
 
-          <div>
-            <button onclick="buttonNumero_1()">1</button>
-            <button onclick="buttonNumero_2()">2</button>
-            <button onclick="buttonNumero_3()">3</button>
-            <button onclick="btnOperadorSuma()">+</button>
+          <div class="calculator__row">
+            <button class="calculator__button" onclick="buttonNumero_1()">1</button>
+            <button class="calculator__button" onclick="buttonNumero_2()">2</button>
+            <button class="calculator__button" onclick="buttonNumero_3()">3</button>
+            <button class="calculator__button" onclick="btnOperadorSuma()">+</button>
           </div>
 
-          <div>
-            <button onclick="buttonNumero_a()">?</button>
-            <button onclick="buttonNumero_0()">0</button>
-            <button onclick="buttonNumero_d()">.</button>
-            <button onclick="btnOperadorIgual()">=</button>
+          <div class="calculator__row">
+            <button class="calculator__button" onclick="buttonNumero_a()">?</button>
+            <button class="calculator__button" onclick="buttonNumero_0()">0</button>
+            <button class="calculator__button" onclick="buttonNumero_d()">.</button>
+            <button class="calculator__button" onclick="btnOperadorIgual()">=</button>
           </div>
         </div>
       </div>
     </div>
+  </main>
+  <footer class="footer">
+    <h3>contacto</h3>
+  </footer>
+</div>
     <script src="App.js"></script>
   </body>
 </html>
