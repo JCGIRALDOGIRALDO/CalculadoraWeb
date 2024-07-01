@@ -113,7 +113,11 @@ function calcularResultado() {
 function btnOperadorIgual() {
   calcularResultado();
 }
-
+/*function btnreiniciar() {
+  operadorActual = 0;
+  actualizarResultado();
+}
+*/
 // Placeholder para operadores no definidos
 function buttonNumero_a() {
   alert("Función no definida");
@@ -121,9 +125,7 @@ function buttonNumero_a() {
 function buttonNumero_b() {
   alert("Función no definida");
 }
-function buttonNumero_c() {
-  alert("Función no definida");
-}
+
 function buttonNumero_d() {
   alert("Función no definida");
 }
